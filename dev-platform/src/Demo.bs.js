@@ -2,6 +2,9 @@
 'use strict';
 
 
-console.log("Hello, BuckleScript and Reason! new compilation?");
+function greet(person) {
+  return "Hello, " + (person.name + (" with ID " + (String(person.id) + "!")));
+}
 
-/*  Not a pure module */
+exports.greet = greet;
+/* No side effect */
